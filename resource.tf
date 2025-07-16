@@ -2,7 +2,6 @@ resource "azurerm_resource_group" "Assignterra" {
     name     = "example-resources"
     location = "East US"
 }
-
 resource "azurerm_virtual_network" "terra_vnet" {
     name                = "terra-vnet"
     address_space       = ["10.0.0.0/16"]
