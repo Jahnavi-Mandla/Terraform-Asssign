@@ -1,3 +1,10 @@
+resource "azurerm_resource_group" "Assignterra" {
+
+    name     = "Assignterra"
+
+    location = "East US"
+
+}
 
 resource "azurerm_virtual_network" "Assignterra_vnet" {
     name                = "terra-vnet"
