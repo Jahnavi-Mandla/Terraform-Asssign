@@ -1,12 +1,9 @@
-resource "azurerm_resource_group" "Assignterra" {
-
-    name     = "Assignterra"
-
+resource "azurerm_resource_group" "storeterra" {
+    name     = "example-resources"
     location = "East US"
-
 }
 
-resource "azurerm_virtual_network" "Assignterra_vnet" {
+resource "azurerm_virtual_network" "terra_vnet" {
     name                = "terra-vnet"
     address_space       = ["10.0.0.0/16"]
     location            = azurerm_resource_group.terra.location
@@ -26,3 +23,4 @@ resource "azurerm_subnet" "subnet2" {
     virtual_network_name = azurerm_virtual_network.terra_vnet.name
     address_prefixes     = ["10.0.2.0/24"]
 }
+ 
